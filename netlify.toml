@@ -1,11 +1,16 @@
 [build]
   base = "."
   publish = "public/"
-  command = "yarn && gatsby build"
+  command = "yarn && npx gatsby build"
 #  functions = "project/functions/" // TODO: LAMBDA FUNCTIONS
 
+[context.production]
+  publish = "public/"
+  command = "yarn && npx gatsby build"
+  environment = { NODE_VERSION = "14" }
+
   [build.processing]
-    skip_processing = false
+    skip_processing = true
   [build.processing.css]
     bundle = false
     minify = false
@@ -25,6 +30,17 @@
   for = "/*"
   [headers.values]
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+  #  X-Frame-Options = "DENY"
+  #  X-XSS-Protection = "1; mode=block"
+  #  Content-Security-Policy = "frame-ancestors https://www.facebook.com"
+
+    # Multi-value headers are expressed with multi-line strings.
+    cache-control = '''
+    max-age=0,
+    no-cache,
+    no-store,
+    must-revalidate'''
+
 
 [build.analyze]
   command = "ANALYZE=true gatsby build"
