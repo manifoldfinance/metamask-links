@@ -25,7 +25,7 @@
         "loader-utils": "2.0.0",
         "lodash": "^4.17.15",
         "monaco-editor": "^0.27.0",
-        "monaco-editor-webpack-plugin": "^2",
+        "monaco-editor-webpack-plugin": "^4.1.2",
         "node-fetch": "^2.6.0",
         "qs": "^6.10.1",
         "raw-loader": "^0.5.1",
