@@ -1,6 +1,7 @@
 {
     "name": "metamask-link",
-    "description": "",
+    "description": "metamask deeplinks",
+     "private": true,
     "version": "0.0.22",
     "dependencies": {
         "@apidevtools/json-schema-ref-parser": "^9.0.9",
