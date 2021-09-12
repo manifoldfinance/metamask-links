@@ -59,7 +59,7 @@
   ],
   "scripts": {
     "build": "npx gatsby build --prefix-paths",
-    "setup": "yarn install --frozen-lockfile --non-interactive",
+    "setup": "yarn install --non-interactive",
     "develop": "npx gatsby develop",
     "lint": "npx eslint . --cache --ext js,ts",
     "format": "npx prettier --write \"**/*.{js,jsx,json,md}\"",
