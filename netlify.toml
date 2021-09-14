@@ -1,5 +1,4 @@
-
 [build]
   base = "."
   publish = "public/"
-  command = "yarn && npx gatsby build"
+  command = "yarn --ignore-scripts && npx gatsby build"
