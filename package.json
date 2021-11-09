@@ -1,7 +1,8 @@
 {
   "name": "metamask-link",
-  "description": "",
-  "version": "0.0.22",
+  "description": "generate metamask links",
+  "private": true,
+  "version": "0.0.23",
   "dependencies": {
     "@apidevtools/json-schema-ref-parser": "^9.0.9",
     "@etclabscore/monaco-add-json-schema-diagnostics": "^1.0.3",
@@ -16,7 +17,7 @@
     "@open-rpc/meta-schema": "^1.14.2",
     "@open-rpc/schema-utils-js": "^1.14.3",
     "canvg": "^3.0.7",
-    "gatsby": "2.32.11",
+    "gatsby": "2.32.13",
     "gatsby-plugin-manifest": "^3.7.1",
     "gatsby-theme-material-ui": "^2.0.1",
     "loader-utils": "2.0.0",
@@ -50,22 +51,21 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
     "node-fetch": "^2.6.0",
-    "prettier": "^1.19.1",
+    "prettier": "2.4.0",
     "typescript": "^3.7.4"
   },
   "keywords": [
     "JSON-RPC"
   ],
   "scripts": {
-    "build": "gatsby build --prefix-paths",
-    "setup": "yarn install && yarn allow-scripts",
-    "develop": "gatsby develop",
-    "lint": "eslint . --cache --ext js,ts",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "build": "npx gatsby build --prefix-paths",
+    "setup": "yarn install --non-interactive --no-scripts",
+    "develop": "npx gatsby develop",
+    "lint": "npx eslint . --cache --ext js,ts",
+    "format": "npx prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "yarn develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "exit 0",
-    "type-check": "tsc --noEmit"
+    "serve": "npx gatsby serve",
+    "clean": "npx gatsby clean",
+    "type-check": "npx tsc --noEmit"
   }
 }
